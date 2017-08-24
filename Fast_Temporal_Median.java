@@ -123,7 +123,7 @@ public class Fast_Temporal_Median implements PlugInFilter
 	
 		int dimension = stack.getWidth()*stack.getHeight(); //ImageJ saves the pixels of the image in an unidimensional array of size width*height
         int bitdepth = 65536; // color depth of image
-        int colors = (int) (bitdepth / binfactor) - 1; // bit depth for the re-binned histogram (uses less RAM)
+        int colors = (int) (bitdepth / binfactor); // bit depth for the re-binned histogram (uses less RAM)
         // IJ.showStatus("colors=" + colors);
         short[] pixelsraw = new short[dimension];
         short[] pixelsraw2 = new short[dimension]; //Arrays to save the raw value of pixels that are being processed
